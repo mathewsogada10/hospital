@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+  <definition name="base" template="/WEB-INF/layout/page.jsp">
+    <put-attribute name="header" value="/WEB-INF/layout/header.jsp" />
+    <put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />
+  </definition>
+  
+  <definition name="base2" template="/WEB-INF/layout/login.jsp">
+  </definition>
+
+  <definition name="home" extends="base2">
+    <put-attribute name="body" value="/WEB-INF/views/home.jsp" />
+  </definition>
+
+  <definition name="mainPage" extends="base">
+    <put-attribute name="body" value="/WEB-INF/views/mainPage.jsp" />
+  
+  </definition>
+
+  <definition name="new" extends="base">
+    <put-attribute name="body" value="/WEB-INF/views/addPatient.jsp" />
+  </definition>
+
+    <definition name="showPatients" extends="base">
+    <put-attribute name="body" value="/WEB-INF/views/viewPatient.jsp" />
+  </definition>
+    
+   <definition name="showContacts" extends="base">
+    <put-attribute name="body" value="/WEB-INF/views/viewContact.jsp" />
+  </definition>
+  
+  <definition name="showLocation" extends="base">
+    <put-attribute name="body" value="/WEB-INF/views/viewLocation.jsp" />
+  </definition>
+   <definition name="showEnrollments" extends="base">
+    <put-attribute name="body" value="/WEB-INF/views/viewEnrollment.jsp" />
+  </definition>
+  <definition name="showKin" extends="base">
+    <put-attribute name="body" value="/WEB-INF/views/viewKin.jsp" />
+  </definition>
+  
+   <definition name="showEditpatients" extends="base">
+    <put-attribute name="body" value="/WEB-INF/views/editPatient.jsp" />
+  </definition>
+  
+  <definition name="showEditContacts" extends="base">
+    <put-attribute name="body" value="/WEB-INF/views/editContact.jsp" />
+  </definition>
+  
+   <definition name="addKin" extends="base">
+    <put-attribute name="body" value="/WEB-INF/views/addNextOfKin.jsp" />
+  </definition>
+  
+     <definition name="showEditKin" extends="base">
+    <put-attribute name="body" value="/WEB-INF/views/editKin.jsp" />
+  </definition>
+  
+   <definition name="addContact" extends="base">
+    <put-attribute name="body" value="/WEB-INF/views/addContact.jsp" />
+  </definition>
+  
+  <definition name="addEnrollment" extends="base">
+    <put-attribute name="body" value="/WEB-INF/views/addEnrollment.jsp" />
+  </definition>
+  
+    <definition name="showHistoricoPatients" extends="base">
+    <put-attribute name="body" value="/WEB-INF/views/viewHistoricalPatient.jsp" />
+  </definition>
+  
+    <definition name="showEditEnrollment" extends="base">
+    <put-attribute name="body" value="/WEB-INF/views/editEnrollment.jsp" />
+     </definition>
+     
+  <definition name="addLocation" extends="base">
+    <put-attribute name="body" value="/WEB-INF/views/addLocation.jsp" />
+  </definition>
+  
+   <definition name="showEditLocation" extends="base">
+    <put-attribute name="body" value="/WEB-INF/views/editLocation.jsp" />
+  </definition>
+    
+</tiles-definitions>

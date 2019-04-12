@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+
+<div ng-app="app" ng-controller="jsaController">
+<table>
+<tr ng-repeat="patient in listPatients">
+ <td>patient.idNumber</td>
+ <td>patient.dateOfBirth</td>
+ <td>patient.firstName</td>
+ <td>patient.middleName</td>
+ <td>patient.sirName</td>
+</tr>
+</table>
+</div>
+<script>
+var app = angular.module('app',[]);
+app.controller('jsaController',function($scope,$http,$location){
+	$scope.listPatients = [];
+	
+	function getAllPatient(){
+		var url = $location.absUrl()+"api/patient/all";
+		
+		$http.get(url).then(function(response){
+			$scope.getDivAvailable = true;
+			$scope.listPatients = response.data;
+		}, function error(response){
+			$scope.postResultMessage = "Error Status:" + response.statusText;
+		});
+	}
+	getAllPatient();
+});
+</script>
+</body>
+</html>
